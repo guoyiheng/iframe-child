@@ -13,19 +13,20 @@ function go() {
 </script>
 
 <template>
-  <div class="border-1px border-red-500" p-10>
-    <div m-3>Child Iframe</div>
-    <TheInput
-      v-model="name"
-      placeholder="What's your name?"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-
+  <div flex items-center justify-evenly >
     <div>
-      <button class="m-3 text-sm btn" :disabled="!name" @click="go">
-        Go
-      </button>
+      <TheInput
+        v-model="name"
+        placeholder="输入路径"
+        autocomplete="false"
+        @keydown.enter="go"
+      />
+
+      <div>
+        <button class="m-3 text-sm btn" :disabled="!name" @click="go">
+          Go
+        </button>
+      </div>
     </div>
   </div>
 </template>
