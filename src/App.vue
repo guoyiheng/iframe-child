@@ -20,7 +20,7 @@ const route = useRoute()
 watch(
   () => route.path,
   (newPath, oldPath) => {
-    sendMessage(route.path)
+    sendMessage(window.location.href)
   },
   { immediate: true },
 )
@@ -28,7 +28,7 @@ watch(
 
 <template>
   <main class="border-4px border-red-300" font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
-    <div mb-10px c-red-300>
+    <div mb-20px c-red-300>
       Child Iframe
     </div>
     <RouterView />
