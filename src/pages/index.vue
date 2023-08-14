@@ -10,29 +10,11 @@ function go() {
   if (name.value)
     router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
-function go2() {
-  router.push('/test')
-}
 </script>
 
 <template>
-  <div>
-    <div i-carbon-campsite inline-block text-4xl />
-    <p>
-      <a
-        rel="noreferrer"
-        href="https://github.com/antfu/vitesse-lite"
-        target="_blank"
-      >
-        Vitesse Lite
-      </a>
-    </p>
-    <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
-    </p>
-
-    <div py-4 />
-
+  <div class="border-1px border-red-500" p-10>
+    <div m-3>Child Iframe</div>
     <TheInput
       v-model="name"
       placeholder="What's your name?"
@@ -43,11 +25,6 @@ function go2() {
     <div>
       <button class="m-3 text-sm btn" :disabled="!name" @click="go">
         Go
-      </button>
-    </div>
-    <div>
-      <button class="m-3 text-sm btn" @click="go2">
-        Go Test
       </button>
     </div>
   </div>

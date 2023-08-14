@@ -1,13 +1,18 @@
 <script setup lang="ts">
-const name = 'test'
-onMounted(() => {
-  // eslint-disable-next-line no-console
-  console.log('mounted')
-})
+const router = useRouter()
+function goHome() {
+  router.push('/')
+}
 </script>
 
 <template>
   <div>
-    hello, {{ name }}
+    Child Iframe
   </div>
+  <button
+    btn
+    @click="goHome"
+  >
+    Refresh page
+  </button>
 </template>
